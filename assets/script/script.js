@@ -1,14 +1,26 @@
 
 $(document).ready(function () {
 $(".saveBtn").click(function(){
-var saveAppoinment = $(this).siblings(".description").val();
+var saveAppoinment = $(this).siblings(".userInput").val();
 var timeId = $(this).parent().attr("id");
+localStorage.setItem(saveAppoinment, timeId);
 
+$(".notification").addClass("show");
+setTimeout(function () {
+    $('.notification').removeClass("show");
+  }, 3000);
+
+});
+var updatinghr = function(){
+currentTime;
+
+$(".time-block").each(function(){
 
 
 
 });
 
+}
 
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in

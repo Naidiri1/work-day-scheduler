@@ -1,18 +1,21 @@
 body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 25px;
-    margin-left: 200px;
-    margin-right: 180px;
-    margin-bottom: 100px;
-    line-height: 20px;
+    margin-bottom: 80px;
+    
 }
   
   h1 {
     font-family: 'Kanit', sans-serif;
     font-family: 'Rubik Distressed', cursive;
+    margin-left: 120px;
   }
 .lead, #time {
     font-weight: bolder;
+    background-color: #ebb4b1a8;
+     margin-bottom: 0px;
+     margin-left: 235px;
+     margin-right: 140px;
 }
   textarea {
     background: transparent;
@@ -23,7 +26,7 @@ body {
     padding: 10px;
   }
   
-  .description {
+  .userInput {
     white-space: pre-wrap;
   }
   
