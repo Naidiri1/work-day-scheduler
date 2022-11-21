@@ -5,16 +5,21 @@ var saveAppoinment = $(this).siblings(".userInput").val();
 var timeId = $(this).parent().attr("id");
 localStorage.setItem(saveAppoinment, timeId);
 
-$(".notification").addClass("show");
+$(".message").addClass("show");
 setTimeout(function () {
-    $('.notification').removeClass("show");
+    $('.message').removeClass("show");
   }, 3000);
 
 });
-var updatinghr = function(){
-currentTime;
+updatingHr = function(){
+currentTime= dayjs().hr();
+
 
 $(".time-block").each(function(){
+    var timeBlocker = parseInt($(this).attr("id").split("-")[1]);
+if(timeBlocker<currentTime){
+  
+}
 
 
 
