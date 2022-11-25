@@ -1,7 +1,8 @@
+//date format
 var currentDate = dayjs().format("dddd MMMM DD, YYYY");
 
 $("#currentDay").text(currentDate);
-//set interval for the time display on the screen 
+//set interval for the time display on the screen with h/m/s
 setInterval(function () {
   var currentTime = dayjs().format("hh:mm:ss a");
   $("#time").text(currentTime);
@@ -10,7 +11,7 @@ setInterval(function () {
 $(".time-block").each(function () {
   // This is the current hour in military time
   var currentHour = dayjs().hour();
-  // this gets the id number 
+  // this gets the id number from 8-16 hr 
   var timeBlocker = parseInt($(this).attr("id").split("-")[1]);
   if (timeBlocker < currentHour) {
     $(this).addClass('past')
@@ -20,42 +21,27 @@ $(".time-block").each(function () {
     $(this).addClass('future')
   }
 });
-
+// loops through the hr 8-16 in the schedule 
 function getStorage() {
   for (let index = 8; index < 17; index++) {
     $(`#text-${index}`).text(localStorage.getItem(`hour-${index}`))
   }
 };
-
+// users input saved in the local storage with a function on an hr button 
 $(document).ready(function () {
   $(".saveBtn").click(function () {
+
     var saveAppoinment = $(this).siblings(".userInput").val();
     var timeId = $(this).parent().attr("id");
     localStorage.setItem(timeId, saveAppoinment);
 
-    $(".message").addClass("show");
-    setTimeout(function () {
-      $('.message').removeClass("show");
-    }, 3000);
+  //adding a notification when the input is saved in local storage displayed for 3 seconds 
+
+    document.getElementById("notify").style.display = "block";
+    setTimeout (function (){
+     document.getElementById("notify").style.display = "none";
+    },3000);
   });
 });
 
 getStorage();
-// TODO: Add a listener for click events on the save button. This code should
-// use the id in the containing time-block as a key to save the user input in
-// local storage. HINT: What does `this` reference in the click listener
-// function? How can DOM traversal be used to get the "hour-x" id of the
-// time-block containing the button that was clicked? How might the id be
-// useful when saving the description in local storage?
-//
-// TODO: Add code to apply the past, present, or future class to each time
-// block by comparing the id to the current hour. HINTS: How can the id
-// attribute of each time-block be used to conditionally add or remove the
-// past, present, and future classes? How can Day.js be used to get the
-// current hour in 24-hour time?
-//
-// TODO: Add code to get any user input that was saved in localStorage and set
-// the values of the corresponding textarea elements. HINT: How can the id
-// attribute of each time-block be used to do this?
-
-
