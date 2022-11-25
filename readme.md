@@ -22,4 +22,14 @@ This app can be used by anyone who wants to have an organizer schedule hour by h
 
 The following image shows the web application's appearance and functionality:
 
-![representation of the app appearance]()
+![representation of the app appearance](./assets/screenshots/image.jpg)
+
+* link to deployed application: [Work Day Scheduler]()
+
+# Credits #
+
+N/A
+
+# License #
+
+N/A
