@@ -24,7 +24,7 @@ The following image shows the web application's appearance and functionality:
 
 ![representation of the app appearance](./assets/screenshots/image.jpg)
 
-* link to deployed application: [Work Day Scheduler]()
+* link to deployed application: [Work Day Scheduler](https://naidiri1.github.io/work-day-scheduler/)
 
 # Credits #
 
