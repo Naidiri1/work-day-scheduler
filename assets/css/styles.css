@@ -10,6 +10,7 @@ body {
     font-family: 'Rubik Distressed', cursive;
     margin-left: 120px;
   }
+  /* time display on header */
 .lead, #time {
     font-weight: bolder;
     background-color: #ebb4b1a8;
@@ -17,6 +18,7 @@ body {
      margin-left: 235px;
      margin-right: 140px;
 }
+
   textarea {
     background: transparent;
     border: none;
@@ -25,7 +27,7 @@ body {
     border-left: 1px solid black;
     padding: 10px;
   }
-  
+  /* users input */
   .userInput {
     white-space: pre-wrap;
   }
